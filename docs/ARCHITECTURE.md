@@ -1,8 +1,8 @@
-# App Design Requirements - AT&T Direct IP Shoulder Tap Demo
+# App Architecture - AT&T Car Unlock Demo
 
-## 0. AI Assistant Guidelines (Rules of Engagement)
+## 0. AI Assistant Guidelines
 *   **Approval Required:** The AI Assistant must talk through every proposed step and wait for explicit user approval before modifying any code or project files.
-*   **Source of Truth:** This file (`APP_DESIGN.md`) is the primary reference for high-level architecture and requirements. The Assistant must check this file before starting any new task.
+*   **Source of Truth:** This file (`docs/ARCHITECTURE.md`) is the primary reference for high-level architecture and requirements. The Assistant must check this file before starting any new task.
 *   **Output Structure:** All responses from the AI Assistant must follow this structure:
     1. **Explanations:** Contextual information about the task or problem.
     2. **Recommended Actions:** Specific steps the Assistant proposes to take.
@@ -45,10 +45,7 @@ We will follow modern Android development practices:
 *   **DI:** Hilt (to provide Singleton instances of the API service).
 *   **State Management:** StateFlow in ViewModels.
 
-### 4.1 API Contract (Expected Endpoints)
-*   `POST /auth/login`: Validates credentials and returns an auth token.
-*   `GET /vehicles`: Returns a list of VINs associated with the authenticated user.
-*   `POST /vehicle/command`: Sends a lock/unlock command for a specific VIN.
+### 4.1 API Contract
 
 ## 5. UI/UX Principles
 ### 5.1 Design Principles  
@@ -57,6 +54,7 @@ We will follow modern Android development practices:
 *   **Branding:** AT&T theme colors.
     * Blue: #009FDB
     * White: #FFFFFF
+
 ### 5.2 Navigation & Screens
 1.  **LoginScreen:** Username and password input.
 2.  **VehicleSelectionScreen:** A list or dropdown of available vehicles (VINs).
@@ -64,7 +62,7 @@ We will follow modern Android development practices:
 
 ## 6. Data Model
 *   **User:** `userId`, `username`, `authToken`.
-*   **Vehicle:** `vin`, `modelName`.
+*   **Vehicle:** `vin`, `name`.
 *   **CommandRequest:** `vin`, `action` (LOCK/UNLOCK).
 
 ## 7. Version Control & Commits
