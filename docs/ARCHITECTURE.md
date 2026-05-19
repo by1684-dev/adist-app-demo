@@ -46,6 +46,7 @@ We will follow modern Android development practices:
 *   **State Management:** StateFlow in ViewModels.
 
 ### 4.1 API Contract
+The detailed JSON request/response structures are defined in [API.md](API.md).
 
 ## 5. UI/UX Principles
 ### 5.1 Design Principles  
