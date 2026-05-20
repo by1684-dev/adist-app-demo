@@ -2,7 +2,7 @@
 
 This document defines the JSON contract between the Android App and the AWS EC2 Server.
 
-## 1. Authentication (POST /auth/login)
+## 1. Authentication (POST api/v1/auth/login)
 **Request Body:**
 ```json
 {
@@ -20,7 +20,7 @@ This document defines the JSON contract between the Android App and the AWS EC2 
 }
 ```
 
-## 2. Vehicle Information (GET /vehicles)
+## 2. Vehicle Information (GET api/v1/vehicles)
 **Headers:**
 * `Authorization: Bearer <token>`
 
@@ -38,7 +38,7 @@ This document defines the JSON contract between the Android App and the AWS EC2 
 ]
 ```
 
-## 3. Command Execution (POST /vehicle/command)
+## 3. Command Execution (POST api/v1/vehicle/command)
 **Headers:**
 * `Authorization: Bearer <token>`
 
