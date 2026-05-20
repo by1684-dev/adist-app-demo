@@ -23,6 +23,7 @@ server. Part of a larger 5G connectivity demo involving a Raspberry Pi controlle
     commands.
     3. **Raspberry Pi + 5G Module:** End-node that receives commands from EC2 and interacts with 
     the hardware.
+*   **Roadmap:** The implementation phases are tracked in [ROADMAP.md](ROADMAP.md).
 
 ## 2. High-Level Architecture
 Follow modern Android development practices:
